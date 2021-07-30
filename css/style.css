@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    width: 1200px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.top{
+    background: yellow;
+    height: 100px;
+}
+
+.mid{
+    background: yellowgreen;
+    height: 100px;
+    width: 600px;
+    margin: 100px auto;
+    align-items: center;
+}
+
+.mid::before{
+    background: black;
+    width: 1000px;
+    height: 40px;
+    display: block;
+}
+
+.text{
+    text-align: center;
+}
+
+.bot{
+    background: tomato;
+    height: 100px;
+}

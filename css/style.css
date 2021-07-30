@@ -1,39 +1,667 @@
-body{
+html {
+    box-sizing: border-box;
+}
+
+*, *::after *::before {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    transition: all .3s;
+}
+
+a:hover {
+    color: red;
+    transition: all .3s;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    padding-left: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+button.slick_next {
+    display: none;
+}
+
+button.slick_prev {
+    display: none;
+}
+
+.conteiner {
+    max-width: 1240px;
+    padding: 0 15px;
+    margin: 0 auto;
+    position: relative;
+}
+
+body {
+    margin: 0;
+}
+
+.socials_fix {
+    position: fixed;
+    top: 20%;
+    right: 0;
+    display: grid;
+    z-index: 9999;
+}
+
+.socials_fix-img {
+    width: 40px;
+    height: 40px;
+    opacity: 0.5;
+}
+
+.socials_fix-img:hover {
+    opacity: 1;
+}
+
+.header_bg {
+    background: #000000;
+    padding-bottom: 20px;
+}
+
+.start_bg {
+    background-image: url(../img/start_img.png);
+    background-repeat: no-repeat;
+    height: 766px;
+    background-size: 100%;
+}
+
+@media (max-width:1400px) {
+    .start_bg {
+        background-size: cover;
+    }
+}
+
+.start_bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(45.97% 54.43% at 50% 45.57%, rgba(23, 26, 28, 0) 47.4%, rgba(23, 26, 28, 0.00225974) 50.29%, rgba(4, 5, 5, 0.820343) 73.44%, rgba(5, 5, 6, 0.792703) 87.88%, #000000 96.35%);
+    opacity: 0.4;
+    height: 766px;
+    z-index: 0;
+}
+
+.header_inner {
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    padding-top: 42px;
+    position: relative;
+}
+
+.logo_link {
+    display: flex;
+    align-items: center;
+}
+
+.logo_img {
+    width: 54px;
+    height: 27px;
+}
+
+.logo_text {
+    margin-left: 11px;
+    font-size: 18px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu_list {
+    display: flex;
+}
+
+.menu_list-link {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.menu_call {
+    display: flex;
+    align-items: center;
+}
+
+.menu_auth {
+    width: 115px;
+    height: 30px;
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 3px;
+    transition: all .5s;
+    text-align: center;
+    align-items: center;
+    display: grid;
+}
+
+.menu_auth:hover {
+    background-color: rgb(11, 11, 133);
+    transition: all .5s;
+    color: #fff;
+}
+
+.phone {
+    margin-left: 8px;
+    font-size: 16px;
+}
+
+.start_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.start_text {
+    font-size: 92px;
+    color: #fff;
+    text-shadow: 2px 2px black;
+    margin-top: 127px;
+}
+
+.start_image {
+    width: 397px;
+    height: 235px;
+}
+
+.start_text1 {
+    color: #fff;
+    text-shadow: 2px 2px black;
+    font-size: 17px;
+    margin: 32px 0 60px 0;
+}
+
+.social_img {
+    width: 40px;
+    height: 40px;
+    margin: 0 25px;
+    opacity: 0.5;
+    transition: all .5s;
+}
+
+.social_img:hover {
+    opacity: 1;
+    transition: all .5s;
+}
+
+.shop {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.shop_block {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block {
+    width: 295px;
+    height: 295px;
+    text-align: center;
+    margin: 0px 6px 55px 6px;
+    border: 0.5px solid transparent;
+}
+
+.hov:hover {
+    border: 0.5px solid black;
+    border-radius: 30px 30px 0px 0%;
+}
+
+.block_img {
+    width: 285px;
+    height: 190px;
+    margin-top: 12px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 13px;
+}
+
+.block_text {
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    margin: 0 0 12px 0;
+    text-align: center;
+}
+
+.block_link {
+    font-size: 18px;
+    padding: 2px 6px;
+    border-top: 1px solid black;
+    color: #000000;
+    padding: 2px 6px;
+    transition: all .5s;
+    display: inherit;
+    height: 30px;
+    opacity: 0;
+}
+
+.block:hover .block_link {
+    background: red;
+    border: red;
+    transition: all .5s;
+    color: black;
+    font-weight: 900;
+    font-size: larger;
+    opacity: 1;
+}
+
+.bike_bg {
+    background: black;
+    border-radius: 186px;
+    padding: 31px 0;
+}
+
+.bike_df {
+    display: flex;
+    align-items: center;
+}
+
+.top {
+    max-width: 650px;
+    max-height: 364px;
+}
+
+.bike_img-inner {
+    width: 650px;
+    height: 364px;
+}
+
+.bike_text {
+    color: #fff;
+    font-size: 17px;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 50px;
+}
+
+.brend {
+    margin-bottom: 55px;
+}
+
+.brend_content {
+    margin-top: 55px;
+}
+
+.brend_text {
+    font-size: 42px;
+    text-align: end;
+    margin-right: 20px;
+}
+
+.brend_content-inner {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.brend_img {
+    display: inline-block;
+    margin: 0px 20px;
+    width: 207px;
+    height: 155px;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    vertical-align: top;
+    transition: none;
+}
+
+.brend_img:hover {
+    background-position: 50% 100%;
+    transition: none;
+}
+
+.footer {
+    background: black;
+}
+
+.footer_all {
+    display: flex;
+}
+
+.footer_logo-link {
+    display: flex;
+    align-items: center;
+    padding-bottom: 111px;
+}
+
+.footer_menu {
+    color: #fff;
+    margin: 30px 30px 0px 30px;
+}
+
+.footer_head {
     margin: 0;
     padding: 0;
 }
 
-.header{
-    width: 1200px;
-    padding: 0 10px;
-    margin: 0 auto;
+.footer_menu-li {
+    margin-bottom: 5px;
 }
 
-.top{
-    background:black;
-    height: 100px;
+.footer_menu-link {
+    color: #fff;
 }
 
-.mid{
-    background: yellowgreen;
-    height: 100px;
-    width: 600px;
-    margin: 100px auto;
-    align-items: center;
+.bike_name {
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
-.mid::before{
-    background: black;
-    width: 1000px;
-    height: 40px;
-    display: block;
+.bike_name-text {
+    font-size: 36px;
+    font-weight: 800;
 }
 
-.text{
+.shop_bike {
     text-align: center;
 }
 
-.bot{
-    background: tomato;
-    height: 100px;
+.shop_bike-img {
+    width: 1000px;
+    height: 600px;
 }
+
+.bike_info-t {
+    display: flex;
+    justify-content: space-around;
+}
+
+.bike_info-t1 {
+    text-align: start;
+}
+
+.bike_info-t2 {
+    text-align: start;
+}
+
+.bike_info-li {
+    font-size: 18px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid black;
+    padding-right: 300px;
+}
+
+/* Обратная форма начало*/
+
+#reverse_bg {
+    background: rgba(22, 22, 22, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#reverse {
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    padding: 15px;
+    border: 2px solid #0000cc;
+    border-radius: 10px;
+    color: #0000cc;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: rgb(128, 128, 128);
+}
+
+#reverse_bg:target {
+    display: block;
+}
+
+.reverse_close {
+    display: inline-block;
+    border: 1px solid #0000cc;
+    color: #0000cc;
+    padding: 0 12px;
+    margin: 10px;
+    text-decoration: none;
+    background: #f2f2f2;
+    font-size: 14pt;
+    cursor: pointer;
+    margin-top: 40px;
+    border-radius: 5px;
+}
+
+.reverse_close:hover {
+    border: 1px solid red;
+}
+
+.reverse_form {
+    text-align: start;
+}
+
+.reverse_input {
+    width: -webkit-fill-available;
+    height: 30px;
+    margin-bottom: 15px;
+    border: 1px solid #0000cc;
+}
+
+.reverse_text {
+    width: -webkit-fill-available;
+    height: 90px;
+    border: 1px solid #0000cc;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.reverse_btn {
+    border: 1px solid #0000cc;
+    border-radius: 5px;
+    height: 30px;
+    width: 80px;
+    position: absolute;
+    bottom: 60px;
+    left: 15px;
+    transition: all .5s;
+}
+
+.reverse_btn:hover {
+    border: 1px solid green;
+    color: green;
+    font-size: 14px;
+}
+
+/* обратная форма конец*/
+
+/* Вход начало*/
+
+#auth_all {
+    background: rgba(22, 22, 22, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#auth {
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    padding: 15px;
+    border: 2px solid #0000cc;
+    border-radius: 10px;
+    color: #0000cc;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: rgb(128, 128, 128);
+}
+
+#auth_all:target {
+    display: block;
+}
+
+.auth_close {
+    display: inline-block;
+    border: 1px solid #0000cc;
+    color: #0000cc;
+    padding: 0 12px;
+    margin: 10px;
+    text-decoration: none;
+    background: #f2f2f2;
+    font-size: 14pt;
+    cursor: pointer;
+    margin-top: 40px;
+    border-radius: 5px;
+}
+
+.auth_close:hover {
+    border: 1px solid red;
+}
+
+.auth_form {
+    text-align: start;
+}
+
+.auth_input {
+    width: -webkit-fill-available;
+    height: 30px;
+    margin-bottom: 15px;
+    border: 1px solid #0000cc;
+}
+
+.register_link {
+    margin-bottom: 8px;
+    display: block;
+}
+
+.auth_btn {
+    border: 1px solid #0000cc;
+    border-radius: 5px;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: absolute;
+    bottom: 60px;
+    left: 15px;
+    transition: all .5s;
+}
+
+.auth_btn:hover {
+    border: 1px solid green;
+    color: green;
+}
+
+/* Вход конец*/
+
+/* Регистрация начало*/
+
+#register_all {
+    background: rgba(22, 22, 22, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#register {
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    padding: 15px;
+    border: 2px solid #0000cc;
+    border-radius: 10px;
+    color: #0000cc;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: rgb(128, 128, 128);
+}
+
+#register_all:target {
+    display: block;
+}
+
+.register_close {
+    display: inline-block;
+    border: 1px solid #0000cc;
+    color: #0000cc;
+    padding: 0 12px;
+    margin: 10px;
+    text-decoration: none;
+    background: #f2f2f2;
+    font-size: 14pt;
+    cursor: pointer;
+    margin-top: 40px;
+    border-radius: 5px;
+}
+
+.register_close:hover {
+    border: 1px solid red;
+}
+
+.register_form {
+    text-align: start;
+}
+
+.register_input {
+    width: -webkit-fill-available;
+    height: 30px;
+    margin-bottom: 15px;
+    border: 1px solid #0000cc;
+}
+
+.auth_link {
+    margin-bottom: 8px;
+    display: block;
+}
+
+.register_btn {
+    border: 1px solid #0000cc;
+    border-radius: 5px;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: absolute;
+    bottom: 60px;
+    left: 15px;
+    transition: all .5s;
+}
+
+.register_btn:hover {
+    border: 1px solid green;
+    color: green;
+}
+
+/* Регистрация конец*/

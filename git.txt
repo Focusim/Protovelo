@@ -1,0 +1,18 @@
+grow, mark and tweak your common history
+   branch            Список, создание или удаление веток
+   commit            Записывать изменения в репозиторий
+   merge             Объедините две или более историй развития вместе
+   rebase            Повторное применение коммитов поверх другого базового наконечника
+   reset             Сбросить текущую HEAD в указанное состояние
+   switch            Переключить ветки
+   tag               Создание, перечисление, удаление или проверка объекта тега, подписанного с помощью GPG
+
+collaborate (see also: git help workflows)
+   fetch             Скачать объекты и ссылки из другого репозитория
+   pull              Получение и интеграция с другим репозиторием или локальной веткой
+   push              Обновить удаленные ссылки вместе со связанными объектами
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
